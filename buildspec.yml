@@ -11,5 +11,5 @@ phases:
   build:
     commands:
       - yarn config set version-tag-prefix "v"
-      - yarn config set version-git-message "[deploy] tracker.js version: %s"
+      - yarn config set version-git-message "[deploy] tracker.js version: \%s"
       - yarn version --new-version patch
