@@ -1,0 +1,15 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm install -g yarn
+  pre_build:
+    commands:
+      - git config --global user.name "Masahiro Yamauchi"
+      - git config --global user.email "sgt.yamauchi@gmail.com"
+  build:
+    commands:
+      - yarn config set version-tag-prefix "v"
+      - yarn config set version-git-message "[deploy] tracker.js version: %s"
+      - yarn version --new-version patch
