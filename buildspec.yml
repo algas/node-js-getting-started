@@ -19,4 +19,7 @@ phases:
       - yarn version --new-version $VERSION
   post_build:
     commands:
+      - git remote -v
+      - git remote set-url origin https://algas:$GITHUB_API_TOKEN@github.com/algas/node-js-getting-started.git
+      - git remote -v
       - git push origin $BRANCH
