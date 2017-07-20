@@ -8,4 +8,5 @@ RUN chown -R node /work
 USER node
 
 RUN npm install
-CMD [ "npm", "start" ]
+CMD [ "start" ]
+ENTRYPOINT [ "npm" ]
