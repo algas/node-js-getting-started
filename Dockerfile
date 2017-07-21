@@ -1,4 +1,4 @@
-FROM node:6.11.1
+FROM node:6.11.1-alpine
 
 USER root
 WORKDIR /work
@@ -9,5 +9,4 @@ USER node
 
 RUN npm install
 EXPOSE 5000
-CMD [ "start" ]
-ENTRYPOINT [ "npm" ]
+CMD [ "npm", "start" ]
